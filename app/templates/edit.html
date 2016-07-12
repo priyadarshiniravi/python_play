@@ -1,0 +1,30 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title> Blog</title>
+</head>
+<body>
+<form action="/edit/{{post.id}}" method="post">
+    <div class="row">
+        <div class="large-12 columns">
+            <label>Title
+                <input type="text" name="title" value="{{post.title}}"/>
+            </label>
+        </div>
+    </div>
+    <div class="row">
+        <div class="large-12 columns">
+            <label>Post
+                <textarea type="text" name="body">{{ post.body}}</textarea>
+                <script>console.log({{post.body}})</script>
+            </label>
+        </div>
+    </div>
+    <div class="small-2 columns">
+        <button class="button postfix" type="submit">Edit</button>
+    </div>
+</form>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Flask Blog</title>
+</head>
+<body>
+
+
+<!-- Main Page Content and Sidebar -->
+{% for post in post %}
+<div class="row">
+
+    <!-- Main Blog Content -->
+    <div class="large-9 columns" role="content">
+
+        <article>
+
+            <h3>{{ post.title }}</h3>
+
+
+            <div class="row">
+                <div class="large-6 columns">
+                    <p>{{ post.text }}</p>
+                    <p><a href="{{ url_for('edit', id=post.id) }}">Edit</a></p>
+                    <p><a href="{{ url_for('delete', id=post.id) }}">Delete</a></p>
+                </div>
+            </div>
+
+
+        </article>
+    </div>
+</div>
+
+<hr/>
+
+
+{% endfor %}
+</body>
+</html>
