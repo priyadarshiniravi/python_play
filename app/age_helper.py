@@ -8,7 +8,7 @@ class AgeHelper(object):
         days = (self.date - datetime.now().date()).days
         if (days/365) == 0:
             return str(days % 365) + " days"
-        return str(days/365) + " years" + str(days%365) + " days"
+        return str(days/365) + " year " + str(days%365) + " days"
 
 
 
