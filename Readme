@@ -7,3 +7,5 @@ python db.py db upgrade
 pip install -U pytest
 open tests directory
 run py.test
+
+python -m unittest discover

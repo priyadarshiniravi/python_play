@@ -25,5 +25,12 @@ class FlaskrTestCase(unittest.TestCase):
 
         self.assertEqual(result.status_code, 200)
 
+    def test_posting_new_data(self):
+        d = dict(title="User1First", body="User1Last")
+        result = self.app.post('/add', data=d)
+
+        self.assertEqual(result.status_code, 200)
+
+
 if __name__ == '__main__':
     unittest.main()

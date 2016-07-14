@@ -1,4 +1,5 @@
 import pytest
+from unittest import TestCase
 
 
 # content of test_sample.py
@@ -10,6 +11,7 @@ def func(x):
     return x + 1
 
 
+class TestClass(TestCase):
 class TestClass:
     def test_answer(self):
         assert func(4) == 5
