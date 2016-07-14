@@ -19,7 +19,7 @@ class PostController():
     def edit_data_by_id(self,id,title,body):
         post = self.get_data_by_id(id)
         post.title = title
-        post.text = body
+        post.body = body
         self.db_session.commit()
 
     def delete_data_by_id(self, id):

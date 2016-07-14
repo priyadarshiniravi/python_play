@@ -1,6 +1,7 @@
 from datetime import datetime
 
 from app import db
+from app.age_helper import AgeHelper
 
 
 class Post(db.Model):
@@ -20,4 +21,8 @@ class Post(db.Model):
 
     def __hash__(self):
         return self.title.__hash__ + self.body.__hash__
+
+    def get_age(self):
+        ageHelper = AgeHelper(self.date)
+        return ageHelper.get_age()
 

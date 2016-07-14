@@ -1,6 +1,7 @@
 from flask import render_template, request, flash, redirect, url_for
 
 from app import app, db
+from app.age_helper import AgeHelper
 from app.controller import PostController
 
 
