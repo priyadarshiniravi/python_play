@@ -12,7 +12,6 @@ def func(x):
 
 
 class TestClass(TestCase):
-class TestClass:
     def test_answer(self):
         assert func(4) == 5
 
