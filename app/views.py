@@ -29,7 +29,7 @@ def edit(id):
 @app.route('/delete/<id>', methods=['POST', 'GET'])
 def delete(id):
     controller = PostController(db.session)
-    controller.delete_dat_by_id(id)
+    controller.delete_data_by_id(id)
     flash('deleted')
 
     return redirect(url_for('index'))

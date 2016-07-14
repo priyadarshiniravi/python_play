@@ -1,5 +1,9 @@
 ============Migration=============
 python db.py db init
-#Generate a migration
 python db.py db migrate
 python db.py db upgrade
+
+===========Tests==================
+pip install -U pytest
+open tests directory
+run py.test

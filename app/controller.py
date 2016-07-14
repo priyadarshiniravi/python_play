@@ -22,7 +22,7 @@ class PostController():
         post.text = body
         self.db_session.commit()
 
-    def delete_dat_by_id(self,id):
+    def delete_data_by_id(self, id):
         post = Post.query.get(id)
         self.db_session.delete(post)
         self.db_session.commit()
